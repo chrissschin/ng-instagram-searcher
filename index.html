@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Instagram Searcher</title>
+
+  <!-- vendor styles -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+  <!-- my styles -->
+  <link rel="stylesheet" href="css/styles.css">
+
+
+</head>
+<body ng-controller="mainCtrl" class="container">
+
+  <header class="row">
+  <img class="head-image center-block" src="images/instalogo.png" alt="logo">
+  </header>
+
+  <section class="row">
+    <div class="center-block">
+    <input class="center-block" ng-model="hashTag" type="text" placeholder="enter tag here">
+    <input class="center-block btn btn-primary" ng-click="getData(hashTag)"type="submit">
+    </div>
+  </section>
+
+  <section class="row">
+    <div class="col-sm-4" ng-repeat="image in images"><img class="ig-img  img-responsive animated fadeInRight" ng-src="{{image.images.standard_resolution.url}}" alt=""></div>
+  </section>
+
+  <!-- vendor script -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+  <script src="node_modules/angular-animate/angular-animate.min.js"></script>
+
+  <!-- my scripts -->
+  <script src="myApp.js"></script>
+
+</body>
+</html>
