@@ -1,5 +1,6 @@
 .head-image {
   margin: 0 auto;
+  margin-bottom: 15px;
 }
 
 
@@ -45,4 +46,20 @@
 .fadeInRight {
   -webkit-animation-name: fadeInRight;
   animation-name: fadeInRight;
+}
+
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:center;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+
+.enter-info {
+  margin-bottom: 15px;
 }

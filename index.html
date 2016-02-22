@@ -12,18 +12,22 @@
 
 
 </head>
-<body ng-controller="mainCtrl" class="container">
+<body ng-controller="mainCtrl">
 
   <header class="row">
-  <img class="head-image center-block" src="images/instalogo.png" alt="logo">
+  <img class="head-image center-block img-responsive" src="images/instalogo.png" alt="logo">
   </header>
 
-  <section class="row">
-    <div class="center-block">
-    <input class="center-block" ng-model="hashTag" type="text" placeholder="enter tag here">
-    <input class="center-block btn btn-primary" ng-click="getData(hashTag)"type="submit">
+  <div class="container">
+    <div class="row row-centered">
+
+      <div class="enter-info col-xs-6 col-centered col-max">
+        <input ng-model="hashTag" type="text" placeholder="enter tag here">
+        <input class="btn btn-primary" ng-click="getData(hashTag)"type="submit">
+      </div>
+
     </div>
-  </section>
+  </div>
 
   <section class="row">
     <div class="col-sm-4" ng-repeat="image in images"><img class="ig-img  img-responsive animated fadeInRight" ng-src="{{image.images.standard_resolution.url}}" alt=""></div>
